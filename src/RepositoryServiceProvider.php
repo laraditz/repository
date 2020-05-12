@@ -1,4 +1,5 @@
 <?php
+
 namespace Laraditz\Repository;
 
 use Illuminate\Support\ServiceProvider;
@@ -11,7 +12,7 @@ class RepositoryServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {        
+    {
         $this->publishes([
             __DIR__ . '/../config/repository.php' => $this->configPath('repository.php'),
         ]);
@@ -40,7 +41,6 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->singleton('Repository', function ($app) {
             return new RepositoryContainer;
         });
-
     }
 
     /**
