@@ -13,15 +13,15 @@ class BaseRepository
     public function __construct()
     {
         if ($this->model_name) {
-            $model_path = config('repository.model_path')."\\".$this->model_name;
-            
+            $model_path = config('repository.model_path').'\\'.$this->model_name;
+
             if (class_exists($model_path)) {
                 $this->setModel($model_path);
             }
-        }        
+        }
     }
 
-    private function setModel(String $model): void
+    private function setModel(string $model): void
     {
         $this->model = new $model;
     }

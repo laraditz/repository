@@ -4,7 +4,6 @@ namespace Laraditz\Repository\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
-use Symfony\Component\Console\Input\InputOption;
 
 class RepositoryMakeCommand extends GeneratorCommand
 {
@@ -22,7 +21,6 @@ class RepositoryMakeCommand extends GeneratorCommand
      */
     protected $description = 'Create a new repository class.';
 
-   
     /**
      * The type of class being generated.
      *
@@ -69,7 +67,7 @@ class RepositoryMakeCommand extends GeneratorCommand
         $model = str_replace('/', '\\', $model);
 
         $namespaceModel = $this->laravel->getNamespace() . $model;
-       
+
         $model = class_basename(trim($model, '\\'));
 
         return str_replace('DummyModel', $model, $stub);
