@@ -1,2 +1,3 @@
-# repository
-Model Repository implementation for Laravel.
+# Repository
+
+Model Wrapper Repository implementation for Laravel. 
