@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Laraditz\Repository\BaseRepository;
+
+class DummyClass extends BaseRepository
+{
+    //    
+}
